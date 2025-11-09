@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -126.1, "left": -115.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -109.2,
+      "left": 109.4,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "pot1:VCC", "uno:5V", "red", [ "v297.6", "h229.6" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v307.2", "h287.6" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v288", "h259.2" ] ],
+    [ "led1:A", "uno:8", "green", [ "v57.6", "h38.4" ] ],
+    [ "led1:C", "uno:GND.3", "green", [ "v48", "h192.4", "v249.6", "h-38.4" ] ],
+    [ "pot1:VCC", "uno:7", "red", [ "v0", "h229.6" ] ]
+  ],
+  "dependencies": {}
+}
