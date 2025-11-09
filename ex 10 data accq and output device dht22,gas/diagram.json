@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 77.4, "left": 37.8, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -124.5,
+      "left": -111,
+      "attrs": { "temperature": "56.3" }
+    },
+    { "type": "wokwi-gas-sensor", "id": "gas1", "top": -112.5, "left": 55, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -141.6,
+      "left": 270.6,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 34.8,
+      "left": 359,
+      "attrs": { "color": "red", "flip": "1" }
+    }
+  ],
+  "connections": [
+    [ "dht1:VCC", "uno:VIN", "red", [ "v326.4", "h19.2" ] ],
+    [ "dht1:SDA", "uno:9", "green", [ "v67.2", "h288.1" ] ],
+    [ "dht1:GND", "uno:GND.3", "black", [ "v307.2", "h28.8" ] ],
+    [ "gas1:VCC", "uno:5V", "red", [ "h-192", "v354.3", "h192" ] ],
+    [ "gas1:GND", "uno:GND.2", "black", [ "h-201.6", "v402.4", "h220.8" ] ],
+    [ "gas1:AOUT", "uno:A0", "green", [ "h19.2", "v-19.2", "h-230.4", "v451.2", "h268.8" ] ],
+    [ "bz1:2", "uno:7", "green", [ "v115.2", "h-86.8" ] ],
+    [ "led1:A", "uno:6", "green", [ "v0", "h-134" ] ],
+    [ "led1:C", "uno:GND.3", "green", [ "v230.4", "h-192" ] ],
+    [ "bz1:1", "uno:GND.2", "green", [ "v86.4", "h28.8", "v259.2", "h-115.2" ] ]
+  ],
+  "dependencies": {}
+}
