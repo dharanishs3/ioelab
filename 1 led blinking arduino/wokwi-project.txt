@@ -1,0 +1,38 @@
+Downloaded from https://wokwi.com/projects/446980880026548225
+
+Simulate this project on https://wokwi.com
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -99.6, "left": 61.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -63.25,
+      "left": 115.2,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "uno:8", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.2", "green", [ "v0", "h-124.4", "v288", "h230.4" ] ]
+  ],
+  "dependencies": {}
+}
+void setup() {
+  // put your setup code here, to run once:
+    pinMode(8, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(8, HIGH);
+  delay(1000);
+  digitalWrite(8, LOW);
+  delay(1000);
+
+}

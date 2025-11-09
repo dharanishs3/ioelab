@@ -1,0 +1,53 @@
+Downloaded from https://wokwi.com/projects/447073621618955265
+
+Simulate this project on https://wokwi.com
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 115.8, "left": 9, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -140.39,
+      "left": 67.63,
+      "attrs": { "size": "17" }
+    }
+  ],
+  "connections": [
+    [ "stepper1:A-", "uno:11", "green", [ "v76.8", "h19.2" ] ],
+    [ "stepper1:A+", "uno:10", "green", [ "v67.2", "h19.2" ] ],
+    [ "stepper1:B+", "uno:9", "green", [ "v57.6", "h19.2" ] ],
+    [ "stepper1:B-", "uno:8", "green", [ "v48", "h9.59" ] ]
+  ],
+  "dependencies": {}
+}
+void setup() {
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(11, HIGH);
+  delay(5);
+  digitalWrite(11, LOW);
+  delay(5);
+  digitalWrite(10, HIGH);
+  delay(5);
+  digitalWrite(10, LOW);
+  delay(5);
+  digitalWrite(9, HIGH);
+  delay(5);
+  digitalWrite(9, LOW);
+  delay(5);
+  digitalWrite(8, HIGH);
+  delay(5);
+  digitalWrite(8, LOW);
+  delay(5);
+}
+
+
+

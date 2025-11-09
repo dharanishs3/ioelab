@@ -1,0 +1,44 @@
+Downloaded from https://wokwi.com/projects/447068365188632577
+
+Simulate this project on https://wokwi.com
+
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 87, "left": 114.6, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -64.6,
+      "left": -163.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "ntc1:VCC", "uno:VIN", "red", [ "h105.6", "v336", "h230.4" ] ],
+    [ "ntc1:OUT", "uno:A0", "green", [ "h96", "v345.5", "h259.2" ] ],
+    [ "ntc1:GND", "uno:GND.2", "black", [ "h115.2", "v336", "h201.6", "v-9.6" ] ]
+  ],
+  "dependencies": {}
+}
+const int sensorPin=A0;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Temprature Sensor Interfacing Starting..");
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int sensorValue=analogRead(sensorPin);
+  float voltage=sensorValue*(5.0/1023.0);
+  float temp=voltage*100.0;
+  Serial.print(("Temprature"));
+  Serial.print(temp);
+  Serial.println("°c");
+  delay(1000);
+
+}

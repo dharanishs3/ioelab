@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20241129-v1.24.1" }
+    },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -123.3, "left": -205.7, "attrs": {} }
+  ],
+  "connections": [
+    [ "ultrasonic1:GND", "pico:GND.1", "black", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "pico:GP3", "green", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "pico:GP2", "green", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "pico:3V3", "red", [ "v19.2", "h240", "v67.2" ] ]
+  ],
+  "dependencies": {}
+}

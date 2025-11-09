@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "DHARANISH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 200, "left": 120, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 31.2,
+      "left": 241.8,
+      "attrs": { "volume": "0.2" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 175.4,
+      "left": -77.4,
+      "attrs": { "temperature": "25" }
+    }
+  ],
+  "connections": [
+    [ "bz1:2", "uno:8", "green", [ "v0" ] ],
+    [ "bz1:1", "uno:GND.2", "black", [ "v19.2", "h-144", "v278.4", "h153.6" ] ],
+    [ "ntc1:OUT", "uno:A0", "green", [ "h48", "v201.5", "h230.4" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h28.8", "v230.4", "h220.8", "v-9.6" ] ],
+    [ "ntc1:GND", "uno:GND.3", "black", [ "h19.2", "v230.4", "h220.8" ] ]
+  ],
+  "dependencies": {}
+}
