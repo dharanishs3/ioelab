@@ -13,7 +13,7 @@
  6.⁠ ⁠log data using raspberry - https://wokwi.com/projects/447081752173222913
 7.soil moisture- https://wokwi.com/projects/447111625183621121
  8.⁠ ⁠vehicle parking - https://wokwi.com/projects/447081855348921345
- 9.⁠ ⁠healthcare- https://wokwi.com/projects/447074110391731201
+ 9.⁠ ⁠healthcare- https://wokwi.com/projects/447113702630949889
 10.⁠ ⁠data acquistation (gas,temp,hum) - https://wokwi.com/projects/447085680752688129
 
 5-cloud https://wokwi.com/projects/447109493386524673
